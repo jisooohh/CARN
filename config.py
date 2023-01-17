@@ -28,9 +28,9 @@ cudnn.benchmark = True
 # When evaluating the performance of the SR model, whether to verify only the Y channel image data
 only_test_y_channel = True
 # Image magnification factor
-upscale_factor = 2
+upscale_factor = 4
 # Current configuration parameter method
-mode = "train"
+mode = "test"
 # Experiment name, easy to save weights and log files
 exp_name = "CARN_x2"
 
@@ -63,8 +63,8 @@ if mode == "train":
 
 if mode == "test":
     # Test data address
-    lr_dir = f"./data/Set5/LRbicx{upscale_factor}"
+    lr_dir = r"G:\cv_test\dataset\DALLE2\LR_bicubic"
     sr_dir = f"./results/test/{exp_name}"
-    hr_dir = f"./data/Set5/GTmod12"
+    hr_dir = r"G:\cv_test\dataset\DALLE2\GT"
 
-    model_path = "./results/pretrained_models/CARN_x2-DIV2K-4797e51b.pth.tar"
+    model_path = "./results/pretrained_models/CARN_x4-DIV2K-64f7266a.pth.tar"
