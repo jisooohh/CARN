@@ -65,6 +65,6 @@ if mode == "test":
     # Test data address
     lr_dir = f"./data/sr_datasets/DALLE2/4x_LR"
     sr_dir = f"./results/test/{exp_name}"
-    hr_dir = r"./data/sr_datasets/DALLE2/GT"
+    hr_dir = "./data/sr_datasets/DALLE2/GT"
 
     model_path = "./results/pretrained_models/CARN_x4-DIV2K-64f7266a.pth.tar"
